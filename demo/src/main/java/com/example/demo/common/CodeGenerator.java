@@ -42,26 +42,34 @@ public class CodeGenerator {
 
         // Global configuration
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = System.getProperty("user.dir");
+        String projectPath = System.getProperty("user.dir")+"/demo";
         gc.setOutputDir(projectPath + "/src/main/java");
-        gc.setAuthor("jobob");
+        gc.setAuthor("demo");
         gc.setOpen(false);
+        gc.setSwagger2(true);
+        gc.setBaseResultMap(true);
+        gc.setBaseColumnList(false);
         // gc.setSwagger2(true); Entity property Swagger2 annotation
+        gc.setServiceName("%sService");
         mpg.setGlobalConfig(gc);
 
         // Data source configuration
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/ant?useUnicode=true&useSSL=false&characterEncoding=utf8");
+        dsc.setUrl("jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC");
         // dsc.setSchemaName("public");
-        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("password");
+        dsc.setPassword("6625332008");
         mpg.setDataSource(dsc);
 
         // Package configuration
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(scanner("module name"));
-        pc.setParent("com.baomidou.ant");
+        pc.setParent("com.example.demo");
+        pc.setMapper("mapper");
+        pc.setEntity("entity");
+        pc.setService("service");
+        pc.setServiceImpl("service.impl");
+        pc.setController("controller");
         mpg.setPackageInfo(pc);
 
         // Custom configuration
@@ -122,16 +130,16 @@ public class CodeGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperEntityClass("Your own parent entity class, leave unset if not needed!");
+        //strategy.setSuperEntityClass("Your own parent entity class, leave unset if not needed!");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
         // Common parent class
-        strategy.setSuperControllerClass("Your own parent controller class, leave unset if not needed!");
+        //strategy.setSuperControllerClass("Your own parent controller class, leave unset if not needed!");
         // Common fields in the parent class
-        strategy.setSuperEntityColumns("id");
+        //strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner("Table names, separated by commas").split(","));
         strategy.setControllerMappingHyphenStyle(true);
-        strategy.setTablePrefix(pc.getModuleName() + "_");
+        //strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         mpg.execute();
