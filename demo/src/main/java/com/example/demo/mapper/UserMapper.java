@@ -1,9 +1,13 @@
 package com.example.demo.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.Constants;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.demo.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
@@ -17,4 +21,6 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserMapper extends BaseMapper<User> {
 
     IPage pageC(IPage<User> page);
+
+    IPage pageCC(Page<User> page, @Param(Constants.WRAPPER)Wrapper<User> wrapper);
 }

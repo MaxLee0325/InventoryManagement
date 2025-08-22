@@ -88,8 +88,10 @@ public class UserController {
         page.setCurrent(query.getPageNum());
         page.setSize(query.getPageSize());
 
+        LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(User::getName, name);
 
-        IPage result = userService.pageC(page);
+        IPage result = userService.pageCC(page, lambdaQueryWrapper);
 
         System.out.println(result.getTotal());
 
