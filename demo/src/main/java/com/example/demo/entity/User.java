@@ -62,5 +62,12 @@ public class User implements Serializable {
     @TableField("isValid")
     private String isvalid;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }
