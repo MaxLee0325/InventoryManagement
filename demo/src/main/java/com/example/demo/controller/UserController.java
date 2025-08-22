@@ -2,11 +2,15 @@ package com.example.demo.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.example.demo.common.QueryPageParam;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -49,10 +53,46 @@ public class UserController {
         return userService.removeById(id);
     }
 
-    @PostMapping("/listP")
-    public List<User> listP(@RequestBody User user){
+    @PostMapping("/listPage")
+    public List<User> listP(@RequestBody QueryPageParam query){
+
+//        System.out.println(query);
+//        System.out.println(query.getPageNum());
+//        System.out.println(query.getPageSize());
+//
+        HashMap map = query.getParam();
+        String name = map.get("name").toString();
+//
+//        System.out.println(map.get("name"));
+        Page<User> page = new Page<>();
+        page.setCurrent(query.getPageNum());
+        page.setSize(query.getPageSize());
+
         LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
-        lambdaQueryWrapper.like(User::getName, user.getName());
-        return userService.list(lambdaQueryWrapper);
+        lambdaQueryWrapper.like(User::getName, name);
+
+        IPage result = userService.page(page, lambdaQueryWrapper);
+
+        System.out.println(result.getTotal());
+
+        return result.getRecords();
+    }
+
+    @PostMapping("/listPageC")
+    public List<User> listPC(@RequestBody QueryPageParam query){
+
+        HashMap map = query.getParam();
+        String name = map.get("name").toString();
+
+        Page<User> page = new Page<>();
+        page.setCurrent(query.getPageNum());
+        page.setSize(query.getPageSize());
+
+
+        IPage result = userService.pageC(page);
+
+        System.out.println(result.getTotal());
+
+        return result.getRecords();
     }
 }

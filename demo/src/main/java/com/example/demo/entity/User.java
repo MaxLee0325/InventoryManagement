@@ -61,13 +61,4 @@ public class User implements Serializable {
     @ApiModelProperty(value = "是否有效，Y有效，其他无效")
     @TableField("isValid")
     private String isvalid;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 }
