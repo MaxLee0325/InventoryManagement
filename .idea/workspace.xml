@@ -10,11 +10,15 @@
       <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/HeaderView.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/IndexPage.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/MainView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/common/GlobalCorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/demo-web" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +55,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.DemoApplication.executor": "Debug",
+    "Spring Boot.DemoApplication.executor": "Run",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "openjdk-20",
     "kotlin-language-version-configured": "true",
@@ -133,7 +137,8 @@
       <workItem from="1758076108025" duration="123000" />
       <workItem from="1758076242906" duration="3000" />
       <workItem from="1758076835155" duration="1021000" />
-      <workItem from="1768426250582" duration="9900000" />
+      <workItem from="1768426250582" duration="10504000" />
+      <workItem from="1768493403261" duration="9464000" />
     </task>
     <servers />
   </component>
