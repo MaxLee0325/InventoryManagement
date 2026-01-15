@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="602f4c3c-5085-4ff2-84e6-cc320cbdf7ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo-web/src/assets/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/AsideView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/HeaderView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/IndexPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/MainView.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/package.json" afterDir="false" />
@@ -25,6 +27,8 @@
         <option value="Interface" />
         <option value="spring-beans.schema" />
         <option value="Class" />
+        <option value="CSS File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -52,18 +56,22 @@
     "jdk.selected.JAVA_MODULE": "openjdk-20",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/maxlee/Projects/InventoryManagement",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "mysql"
+    ],
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
 }]]></component>
@@ -125,7 +133,7 @@
       <workItem from="1758076108025" duration="123000" />
       <workItem from="1758076242906" duration="3000" />
       <workItem from="1758076835155" duration="1021000" />
-      <workItem from="1768426250582" duration="1606000" />
+      <workItem from="1768426250582" duration="9900000" />
     </task>
     <servers />
   </component>
