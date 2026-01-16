@@ -21,44 +21,44 @@ import lombok.EqualsAndHashCode;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@ApiModel(value="User对象", description="")
+@ApiModel(value="User Object", description="")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @JsonProperty
-    @ApiModelProperty(value = "主键")
+    @ApiModelProperty(value = "primary key")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     @JsonProperty
-    @ApiModelProperty(value = "账号")
+    @ApiModelProperty(value = "account")
     private String no;
 
     @JsonProperty
-    @ApiModelProperty(value = "名字")
+    @ApiModelProperty(value = "name")
     private String name;
 
     @JsonProperty
-    @ApiModelProperty(value = "密码")
+    @ApiModelProperty(value = "password")
     private String password;
     @JsonProperty
     private Integer age;
 
     @JsonProperty
-    @ApiModelProperty(value = "性别")
+    @ApiModelProperty(value = "sex")
     private Integer sex;
 
     @JsonProperty
-    @ApiModelProperty(value = "电话")
+    @ApiModelProperty(value = "phone")
     private String phone;
 
     @JsonProperty
-    @ApiModelProperty(value = "角色 0超级管理员，1管理员，2普通账号")
+    @ApiModelProperty(value = "role")
     private Integer roleId;
 
     @JsonProperty
-    @ApiModelProperty(value = "是否有效，Y有效，其他无效")
+    @ApiModelProperty(value = "validity")
     @TableField("isValid")
     private String isvalid;
 }

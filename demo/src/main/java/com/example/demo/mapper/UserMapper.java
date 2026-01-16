@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
- *  Mapper 接口
+ *  Mapper interface
  * </p>
  *
  * @author demo

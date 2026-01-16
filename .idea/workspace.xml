@@ -10,7 +10,7 @@
       <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/HeaderView.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/IndexPage.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/demo/demo-web/src/components/MainView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/common/GlobalCorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/package-lock.json" afterDir="false" />
@@ -18,6 +18,10 @@
       <change beforePath="$PROJECT_DIR$/demo/demo-web/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/demo-web/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo-web/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/src/main/java/com/example/demo/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo/target/classes/com/example/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/demo/target/classes/com/example/demo/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +142,8 @@
       <workItem from="1758076242906" duration="3000" />
       <workItem from="1758076835155" duration="1021000" />
       <workItem from="1768426250582" duration="10504000" />
-      <workItem from="1768493403261" duration="9464000" />
+      <workItem from="1768493403261" duration="9655000" />
+      <workItem from="1768528796837" duration="4215000" />
     </task>
     <servers />
   </component>
