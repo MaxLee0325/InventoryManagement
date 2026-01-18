@@ -10,7 +10,6 @@ import com.example.demo.common.QueryPageParam;
 import com.example.demo.common.Result;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
-import freemarker.template.utility.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,8 +39,8 @@ public class UserController {
     }
 
     @PostMapping("/save")
-    public boolean save(@RequestBody User user){
-        return userService.save(user);
+    public Result save(@RequestBody User user){
+        return userService.save(user) ? Result.success() : Result.fail();
     }
 
     @PostMapping("/mod")
@@ -118,18 +117,24 @@ public class UserController {
     public Result listPC1(@RequestBody QueryPageParam query){
 
         HashMap map = query.getParam();
-        String name = map.get("name").toString();
+        String name = (String)map.get("name");
+        String sex = (String)map.get("sex");
 
         Page<User> page = new Page<>();
         page.setCurrent(query.getPageNum());
         page.setSize(query.getPageSize());
 
         LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
-        lambdaQueryWrapper.like(User::getName, name);
+
+        if(StringUtils.isNotBlank(name) && !"null".equals(name)){
+            lambdaQueryWrapper.like(User::getName, name);
+        }
+
+        if(StringUtils.isNotBlank(sex)){
+            lambdaQueryWrapper.eq(User::getSex, sex);
+        }
 
         IPage result = userService.pageCC(page, lambdaQueryWrapper);
-
-        System.out.println(result.getTotal());
 
         return Result.success(result.getRecords(), result.getTotal());
     }
