@@ -38,9 +38,20 @@ public class UserController {
         return userService.list();
     }
 
+    @GetMapping("/findByNo")
+    public Result findByNo(@RequestParam String no){
+        List<User> res = userService.lambdaQuery().eq(User::getNo, no).list();
+        return !list().isEmpty() ? Result.success(res) : Result.fail();
+    }
+
     @PostMapping("/save")
     public Result save(@RequestBody User user){
         return userService.save(user) ? Result.success() : Result.fail();
+    }
+
+    @PostMapping("/update")
+    public Result update(@RequestBody User user){
+        return userService.updateById(user) ? Result.success() : Result.fail();
     }
 
     @PostMapping("/mod")
